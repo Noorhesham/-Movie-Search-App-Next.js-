@@ -14,7 +14,7 @@ export default async function MovieModal({ params }: MovieModalPageProps) {
 
   return (
     <Modal>
-      <MovieDetailsContent details={details || null} isLoading={false} error={error || null} />
+      <MovieDetailsContent details={details || null} error={error || null} />
     </Modal>
   );
 }
