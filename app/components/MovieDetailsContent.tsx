@@ -87,7 +87,7 @@ function MovieDetailsContentComponent({ details, error }: MovieDetailsContentPro
           <div className="absolute top-0 left-[-100%] h-full w-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:animate-shine" />
         </motion.div>
 
-        <div className="flex-grow overflow-y-auto pr-2">
+        <div className="flex-grow lg:overflow-y-auto pr-2">
           <motion.div variants={itemVariants} className="flex items-center gap-x-4 mb-2">
             <Badge variant="outline">{details.Rated}</Badge>
             <div className="flex items-center gap-2 text-gray-400">
