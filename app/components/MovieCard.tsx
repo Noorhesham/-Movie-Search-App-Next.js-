@@ -31,14 +31,9 @@ export function MovieCard({ movie, variants }: MovieCardProps) {
     movie.Poster !== "N/A"
       ? movie.Poster
       : `https://placehold.co/500x750/0f172a/eab308?text=${encodeURIComponent(movie.Title)}`;
-  
+
   return (
-    <Link
-      href={`/movie/${movie.imdbID}`}
-      scroll={false}
-      className="block w-full"
-      aria-label={`View details for ${movie.Title}`}
-    >
+    <Link href={`/movie/${movie.imdbID}`} className="block w-full" aria-label={`View details for ${movie.Title}`}>
       <MotionItem
         variants={variants}
         className="relative cursor-pointer aspect-[2/3] w-full overflow-hidden rounded-xl shadow-lg group"

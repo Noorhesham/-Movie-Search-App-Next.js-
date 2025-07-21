@@ -80,7 +80,7 @@ function MovieDetailsContentComponent({ details, error }: MovieDetailsContentPro
             alt={`${details.Title} poster`}
             width={500}
             height={750}
-            className="rounded-lg object-cover w-full h-auto shadow-2xl"
+            className="rounded-lg img-shine object-cover w-full h-auto shadow-2xl"
             priority
             quality={90}
           />
