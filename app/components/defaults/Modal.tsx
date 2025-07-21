@@ -13,7 +13,7 @@ export function Modal({ children }: { children: React.ReactNode }) {
   const handleOpenChange = (open: boolean) => {
     if (!open) {
       setIsOpen(false);
-
+      // Wait for the exit animation to finish before navigating back.
       setTimeout(() => {
         router.back();
       }, ANIMATION_DURATION);

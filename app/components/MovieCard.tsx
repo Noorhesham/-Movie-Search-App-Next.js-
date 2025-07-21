@@ -7,6 +7,20 @@ import { MovieSearchResult } from "../types";
 import MotionItem from "./defaults/MotionItem";
 import Link from "next/link";
 
+const PLACEHOLDER_CONFIG = {
+  width: 500,
+  height: 750,
+  bg: "0f172a",
+  color: "eab308",
+} as const;
+
+const MOTION_CONFIG = {
+  hover: { scale: 1.03, y: -4 },
+  transition: { type: "spring", stiffness: 300, damping: 20 },
+} as const;
+
+const IMAGE_SIZES = "(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw";
+
 export interface MovieCardProps {
   movie: MovieSearchResult;
   variants?: Variants;
