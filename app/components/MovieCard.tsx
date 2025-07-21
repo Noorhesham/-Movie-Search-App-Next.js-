@@ -75,7 +75,7 @@ export function MovieCard({ movie, variants }: MovieCardProps) {
             >
               {movie.Title}
             </motion.h3>
-            <div className="flex items-center justify-between text-sm text-gray-300 mt-1">
+            <div className="flex flex-wrap items-center justify-between text-sm text-gray-300 mt-1">
               <div className="flex items-center gap-1.5">
                 <Clapperboard size={14} className="text-red-400" />
                 <span>{movie.Type}</span>
