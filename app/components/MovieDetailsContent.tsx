@@ -66,7 +66,7 @@ function MovieDetailsContentComponent({ details, error }: MovieDetailsContentPro
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <motion.div
-        className="flex flex-col md:flex-row gap-8 h-full"
+        className="flex  flex-col md:flex-row gap-8 h-full"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
