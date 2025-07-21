@@ -24,7 +24,7 @@ export function Modal({ children }: { children: React.ReactNode }) {
     <Dialog defaultOpen={true} open={true} onOpenChange={handleOpenChange}>
       <DialogTitle></DialogTitle>
       <DialogOverlay>
-        <DialogContent className=" lg:overflow-hidden overflow-y-scroll h-[80vh]">
+        <DialogContent className=" lg:overflow-auto overflow-y-scroll h-[80vh]">
           <div className="  ">{children}</div>
         </DialogContent>
       </DialogOverlay>

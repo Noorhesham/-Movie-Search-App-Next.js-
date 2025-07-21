@@ -1,6 +1,6 @@
 "use client";
 
-import { memo, useMemo } from "react";
+import { useMemo } from "react";
 import Image from "next/image";
 import { motion, Variants } from "framer-motion";
 import { MovieDetails } from "@/app/types";
@@ -14,7 +14,7 @@ export interface MovieDetailsContentProps {
   error: string | null;
 }
 
-function MovieDetailsContentComponent({ details, error }: MovieDetailsContentProps) {
+export const MovieDetailsContent = ({ details, error }: MovieDetailsContentProps) => {
   if (error || !details) {
     return (
       <div className="flex flex-col items-center justify-center h-full text-center p-8">
@@ -87,7 +87,7 @@ function MovieDetailsContentComponent({ details, error }: MovieDetailsContentPro
           <div className="absolute top-0 left-[-100%] h-full w-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:animate-shine" />
         </motion.div>
 
-        <div className="flex-grow lg:overflow-y-auto pr-2">
+        <div className="flex-grow pr-2">
           <motion.div variants={itemVariants} className="flex items-center gap-x-4 mb-2">
             <Badge variant="outline">{details.Rated}</Badge>
             <div className="flex items-center gap-2 text-gray-400">
@@ -153,5 +153,3 @@ function MovieDetailsContentComponent({ details, error }: MovieDetailsContentPro
     </>
   );
 }
-export const MovieDetailsContent = memo(MovieDetailsContentComponent);
-MovieDetailsContent.displayName = "MovieDetailsContent";
