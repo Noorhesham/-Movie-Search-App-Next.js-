@@ -31,7 +31,7 @@ export function MovieCard({ movie, variants }: MovieCardProps) {
     movie.Poster !== "N/A"
       ? movie.Poster
       : `https://placehold.co/500x750/0f172a/eab308?text=${encodeURIComponent(movie.Title)}`;
-
+  
   return (
     <Link
       href={`/movie/${movie.imdbID}`}
